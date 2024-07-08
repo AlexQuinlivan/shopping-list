@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "ae9dcc07-fb5e-45b0-becf-dc0e69639c03",
+  "id": "7a2a9987-e64f-46ea-8114-0ef6a9f359ea",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "reminders": {
@@ -16,32 +16,31 @@
         },
         "name": {
           "name": "name",
-          "type": "text(4)",
+          "type": "text",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
         },
         "aisle": {
           "name": "aisle",
-          "type": "text(4)",
+          "type": "text",
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false
         },
         "image": {
           "name": "image",
-          "type": "text(4)",
+          "type": "text",
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false
         },
         "error": {
           "name": "error",
-          "type": "integer",
+          "type": "text",
           "primaryKey": false,
           "notNull": false,
-          "autoincrement": false,
-          "default": false
+          "autoincrement": false
         },
         "created_at": {
           "name": "created_at",
