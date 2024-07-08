@@ -78,7 +78,7 @@ async function storeReminders(results: ReminderFromCLI[]): Promise<void> {
           .run();
 
         processQueue.push(reminder);
-      } else if (existingReminder.updated_at! < sixHoursAgo || existingReminder.error || existingReminder.name !== reminder.title) {
+      } else if (existingReminder.updated_at! > sixHoursAgo || (existingReminder.error && existingReminder.error !== '404') || existingReminder.name !== reminder.title) {
         tx.update(reminders)
           .set({
             name: reminder.title,
@@ -156,6 +156,7 @@ async function getAisleInfo(itemName: string): Promise<AisleReminderPartial> {
   const encodedItemName = encodeURIComponent(itemName);
   const url = `https://mobile-api.woolworths.co.nz/mobile/api/v1/sites/${process.env.STORE_ID}/articles?locationDetail=true&term=${encodedItemName}`;
 
+  console.log(`Fetching aisle info for '${itemName}'`);
   const response = await fetch(url, {
     headers: {
       'Host': 'mobile-api.woolworths.co.nz',
