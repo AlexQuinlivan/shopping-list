@@ -27,7 +27,7 @@ Go to [reminders-cli](https://github.com/keith/reminders-cli) for install instru
 ```sh
 grep "SHOPPING_LIST_NAME" .env.default | sed 's/SHOPPING_LIST_NAME=//' | xargs -I{} reminders show {}
 ```
-You should either see all incomplete reminders in the configured list
+You should either see all incomplete reminders in the configured list or it fails miserably and you work out what you've done wrong.
 
 ### Step 3: Running the api
 
