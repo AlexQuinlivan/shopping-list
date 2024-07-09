@@ -1,6 +1,6 @@
 # shopping-list
 
-shopping-list is a bodged together node/express api designed to bridge the gap between your iCloud Reminders shopping list and the Woolworths NZ product locator. This tool is particularly useful for those who maintain a shopping list in iCloud Reminders and wish to easily locate these items within the Woolworths NZ store. It uses the [reminders-cli](https://github.com/keith/reminders-cli) tool and reads items from a well known reminders list (e.g., "Shopping") and matches them with products available at your local store.
+shopping-list is a bodged together node/express api designed to bridge the gap between your iCloud Reminders shopping list and the Woolworths NZ product locator. This tool is particularly useful for those who maintain a shopping list in iCloud Reminders and wish to easily locate these items within a Woolworths NZ store. It uses the [reminders-cli](https://github.com/keith/reminders-cli) tool and reads items from a well known reminders list (e.g., "Shopping") and matches them with products available at your local store.
 
 The product locator is pretty hit or miss right now. But this works on a garbage in / garbage out system. The more accurate what you put in your shopping list is, the more accurate what it finds is.
 
