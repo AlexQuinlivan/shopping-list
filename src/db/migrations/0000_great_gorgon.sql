@@ -4,6 +4,6 @@ CREATE TABLE `reminders` (
 	`aisle` text,
 	`image` text,
 	`error` text,
-	`created_at` text DEFAULT CURRENT_TIMESTAMP,
-	`updated_at` text DEFAULT CURRENT_TIMESTAMP
+	`created_at` text NOT NULL,
+	`updated_at` text NOT NULL
 );

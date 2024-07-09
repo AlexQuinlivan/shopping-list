@@ -7,8 +7,8 @@ export const reminders = sqliteTable('reminders', {
   aisle: text('aisle'),
   image: text('image'),
   error: text('error'),
-  created_at: text('created_at').default(sql`CURRENT_TIMESTAMP`),
-  updated_at: text('updated_at').default(sql`CURRENT_TIMESTAMP`),
+  created_at: text('created_at').notNull(),
+  updated_at: text('updated_at').notNull(),
 });
 
 export type Reminder = InferSelectModel<typeof reminders>

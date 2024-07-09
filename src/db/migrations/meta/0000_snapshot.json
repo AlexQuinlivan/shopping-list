@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "7a2a9987-e64f-46ea-8114-0ef6a9f359ea",
+  "id": "ea542940-7a6b-4743-9ca2-c377e1f40601",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "reminders": {
@@ -46,17 +46,15 @@
           "name": "created_at",
           "type": "text",
           "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "CURRENT_TIMESTAMP"
+          "notNull": true,
+          "autoincrement": false
         },
         "updated_at": {
           "name": "updated_at",
           "type": "text",
           "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "CURRENT_TIMESTAMP"
+          "notNull": true,
+          "autoincrement": false
         }
       },
       "indexes": {},

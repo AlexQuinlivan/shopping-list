@@ -1,12 +1,14 @@
-import express from 'express';
-import { getShoppingListItems } from './reminders';
+import express, { type Response } from 'express';
+import { shoppingList } from './shoppingList';
+import { ShoppingListResponse } from './types';
 
 const app = express();
-const port = 9090;
+const port = process.env.PORT;
 
-app.get('/api/shopping-list', async (req, res) => {
+app.get('/api/shopping-list', async (_req, res: Response<ShoppingListResponse>) => {
   try {
-    const items = await getShoppingListItems();
+    // No, this is not idempotent, even in the slightest. There couldn't be more side effects.
+    const items = await shoppingList();
     res.json(items);
   } catch (error) {
     console.error('Error fetching shopping list:', error);
